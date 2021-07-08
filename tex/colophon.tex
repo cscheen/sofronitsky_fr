@@ -1,0 +1,126 @@
+\chapter[%
+Colophon][%
+Colophon]{%
+Colophon}
+\label{chap:Colophon}
+
+\section{Écoutes comparatives}
+
+Afin d'établir une discographie, il est utile voire nécessaire de disposer
+d'outils informatiques qui permettent de comparer des fichiers audio lors de
+leur écoute.
+Le logiciel~Audacity développé par \citet{Audacity} permet d'écouter deux ou
+plusieurs fichiers audio et de visualiser en parallèle leurs spectrogrammes,
+en superposant les fenêtres correspondantes.
+On peut ensuite normaliser les durées ou tempos des fichiers audio comparés
+-- en préservant ou non le diapason (hauteur ou \emph{pitch}) -- et enfin
+établir une corrélation entre un nouveau fichier audio et une référence déjà
+connue.
+L'application~Sonic Visualiser développée par \citet{Cannam} produit le même
+type de résultat mais d'une manière plus systématique avec le greffon~MATCH
+dû à \citet{Dixon05a} et \citet{Dixon05b}.
+
+\section{Composition typographique}
+
+La compilation de ce document à partir des sources requiert le système de
+composition typographique~\Latex développé par l'équipe du projet~\Latex{}3
+\citep{LaTeX}.
+La distribution complète du document comporte le présent fichier~PDF,
+\cad~\fileurl{dvs.pdf}, et les fichiers de source~\Latex, \cad la classe de
+document~\fileurl{cls/dvs.cls}, le fichier maître~\fileurl{dvs.tex} et les
+sources proprement dites~\fileurl{tex/*.tex}.
+L'outil~\Xindy de \citet{Xindy} permet de préparer les index~; les fichiers
+de style sont~\fileurl{xdy/dvs\_*.xdy}.
+(Voir ci-dessous quelques détails d'utilisation des index.)
+Les outils~\Biber et~\Biblatex de \citet{Lehman} permettent de préparer la
+bibliographie~; la base de données est~\fileurl{bib/dvs.bib}.
+Le script de \emph{shell}~Bash~\fileurl{dvs.sh} automatise la production du
+document \citep{Bash}.
+Les sources sont rédigées en plusieurs langues -- français, anglais, russe,
+portugais, espagnol, italien, allemand et néerlandais -- et utilisent les
+alphabets latin et cyrillique~: l'emploi d'un moteur de mise en pages qui
+utilise de manière native la représentation Unicode des caractères et les
+polices de caractères au format~OpenType semble la meilleure solution pour
+un projet de ce type.
+La version~\engversion du moteur~\engname de \citet{LuaTeX} génère donc ici
+la sortie~PDF du document, \via la version~\fmtversion{} du format~\Latex.
+Le fichier~\fileurl{dvs.ver} renseigne les méta\-données du projet.
+Les sommes de contrôle~SHA224 \citep{SHA} de tous les fichiers distribués se
+trouvent dans le fichier~\fileurl{dvs.sha}.
+Les autres fichiers sont des fichiers temporaires engendrés par~\engname,
+\Biber, \Biblatex ou~\Xindy~: on peut les supprimer sans problème et laisser
+le système les reconstituer à partir des sources brutes.
+Le programme~QPDF de \citet{Berkenbilt} assure \emph{a~posteriori} la
+linéarisation ou optimisation du fichier~PDF pour une visualisation en ligne
+plus efficiente.
+
+Une particularité de cette discographie est que la production automatique de
+plusieurs de ses chapitres ou sections est déléguée au système d'indexation,
+donc au programme~\Xindy, qui permet de maintenir l'homogénéité d'une
+présentation par nature systématique.
+Les éléments du document organisés comme des index sont~:
+\begin{itemize}
+ \item
+ la liste des compositeurs et œuvres par ordre de numéros d'opus, en
+ page~\pageref{chap:Oeuvres} (étiquette~: \fileurl{ndxworks}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_w.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*w}~;
+ \item
+ la chronologie des enregistrements en studio et en direct, en
+ page~\pageref{chap:Chronologie} (étiquette~: \fileurl{ndxperfs}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_p.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*p}~;
+ \item
+ le contenu des disques vinyles et des disques compacts, en
+ page~\pageref{chap:Contenu} (étiquette~: \fileurl{ndxdiscs}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_d.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*d}~;
+ \item
+ la liste des enregistrements indisponibles ou non publiés, en
+ page~\pageref{sec:IndisponibleNonpublie} (étiquette~: \fileurl{ndxunpub}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_u.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*u}~;
+ \item
+ la liste des citations, associée au chapitre de bibliographie, en
+ page~\pageref{chap:Listedescitations} (étiquette~: \fileurl{ndxauths}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_a.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*a}~;
+ \item
+ l'index onomastique, qui reprend les noms mentionnés dans le texte, en
+ page~\pageref{chap:Indexonomastique} (étiquette~: \fileurl{ndxnames}).
+ Fichier de style pour~\Xindy~: \fileurl{xdy/dvs\_n.xdy}.
+ Fichiers temporaires~: \fileurl{dvs.i*n}.
+\end{itemize}
+
+Afin de résoudre les références croisées du document -- table des matières,
+bibliographie, index,~etc. --, il est nécessaire d'en compiler les sources à
+cinq reprises successives~; je recommande néanmoins de faire précéder les
+quatre dernières compilations d'exécutions de~\Biber et de~\Xindy sur leurs
+fichiers~\fileurl{dvs.bcf} et~\fileurl{dvs.idx*} respectifs.
+Outre le moteur~\Luatex et les programmes~\Biber et~\Xindy, le document
+emploie la classe~\fileurl{memoir} et les styles~\fileurl{ifthen},
+\fileurl{showframe} (selon option), \fileurl{xcolor}, \fileurl{fontspec},
+\fileurl{babel}, \fileurl{csquotes}, \fileurl{biblatex}, \fileurl{multicol},
+\fileurl{calc}, \fileurl{tikz}, \fileurl{pgfcalendar}, \fileurl{soul},
+\fileurl{xstring}, \fileurl{hyperref}, \fileurl{bookmark}, \fileurl{xspace},
+\fileurl{hologo}, \fileurl{longtable}, \fileurl{microtype},
+\fileurl{enumitem} et~\fileurl{nowidow}.
+La compilation est réalisée, sous le système d'exploitation \citet{Debian},
+avec la distribution~\Tex{}~Live supervisée par \citet{TeXLive}.
+
+\section{Polices de caractères}
+
+En dehors de quelques symboles, les polices de caractères utilisées sont
+Libertinus Serif (police principale à empattements pour le texte), dessinée
+par Philipp H.~\citet{Poll} sous le nom \emph{Linux Libertine} et reprise
+ensuite par Khaled \citet{Hosny} puis par Caleb \citet{Maclennan}, Source
+Sans Pro (police sans empattements pour les inter\-titres), dessinée par
+Paul D.~\citet{HuntSans}, et Source Code Pro (police à chasse fixe), aussi
+dessinée par Paul D.~\citet{HuntCode}~; les versions employées sont au
+format~OpenType.
+Les polices de caractères Asana Math, due à Apostolos \citet{Syropoulos15},
+et Creative Commons Icons, due à Michael \citet{Ummels}, deux polices au
+format~OpenType, fournissent les symboles nécessaires.
+Le style~\fileurl{fontspec} de \citet{Fontspec} permet de sélectionner les
+polices de caractères~OpenType sous les moteurs~\Xetex et~\Luatex dans les
+documents~\Latex.

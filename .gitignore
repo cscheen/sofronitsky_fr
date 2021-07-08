@@ -1,0 +1,12 @@
+tex/*.aux
+dvs.aux
+dvs.bbl
+dvs.bcf
+dvs.blg
+dvs.idx*
+dvs.ilg*
+dvs.ind*
+dvs.log
+dvs.res
+dvs.run.xml
+dvs.toc
