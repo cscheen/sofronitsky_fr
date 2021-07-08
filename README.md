@@ -38,7 +38,7 @@ et le programme d'indexation
 
 La discographie au format PDF peut être obtenue *via* le lien ci-dessous.
 
-![PDF](https://github.com/cscheen/sofronitsky/tree/main/img/pdf.png)
+![](https://raw.githubusercontent.com/cscheen/sofronitsky/main/img/pdf.png)
 [Discographie](https://github.com/cscheen/sofronitsky/blob/main/dvs.pdf)
 
 Si vous souhaitez vérifier le téléchargement effectué, la somme de contrôle
