@@ -39,7 +39,7 @@ et le programme d'indexation
 La discographie au format PDF peut être obtenue *via* le lien ci-dessous.
 
 ![](https://raw.githubusercontent.com/cscheen/sofronitsky/main/img/pdf.png)
-[Discographie](https://github.com/cscheen/sofronitsky/blob/main/dvs.pdf)
+[dvs.pdf](https://raw.githubusercontent.com/cscheen/sofronitsky/main/dvs.pdf)
 
 Si vous souhaitez vérifier le téléchargement effectué, la somme de contrôle
 SHA224 du fichier PDF se trouve dans le fichier `dvs.sha`, à employer avec
