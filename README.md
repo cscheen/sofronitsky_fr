@@ -76,7 +76,8 @@ Les polices de caractères suivantes sont requises, au format OTF :
 
 Le plus simple est d'utiliser une distribution récente du système TeX, par
 exemple
-[TeX Live](http://www.tug.org/texlive/).
+[TeX Live](http://www.tug.org/texlive/),
+qui contient déjà les polices et logiciels requis, à l'exception de QPDF.
 Le dépôt est testé et fonctionne avec la version 2021 de TeX Live.
 
 ### Compilation
@@ -84,20 +85,25 @@ Le dépôt est testé et fonctionne avec la version 2021 de TeX Live.
 Le fichier `MANIFEST.txt` indique la fonction de chaque source du document.
 
 Si votre système d'exploitation ne reconnaît pas les liens symboliques,
-alors il faudra sans doute recopier (ou déplacer) la classe de document
-`dvs.cls` du sous-répertoire `cls/` vers la racine du dépôt :
+alors il faut recopier (ou déplacer) la classe de document `dvs.cls` du
+sous-répertoire `cls/` vers la racine du dépôt :
 
 ```sh
 cp -p cls/dvs.cls dvs.cls
 ```
 
-On peut utiliser le *script* de *shell* `dvs.sh` (ou s'en inspirer).
-Sinon, exécuter une première fois le programme `lualatex` sur le fichier
-maître `dvs.tex`, après avoir établi un lien symbolique vers la classe de
-document si votre système d'exploitation reconnaît de tels liens :
+Si votre système d'exploitation reconnaît les liens symboliques, alors il
+faut établir un lien symbolique vers la classe de document :
 
 ```sh
 ln -s cls/dvs.cls dvs.cls
+```
+
+On peut utiliser le *script* de *shell* `dvs.sh` (ou s'en inspirer).
+Sinon, exécuter une première fois le programme `lualatex` sur le fichier
+maître `dvs.tex` :
+
+```sh
 lualatex dvs.tex
 ```
 
@@ -116,11 +122,18 @@ xindy -o dvs.indw -t dvs.ilgw -C utf8 -L general -M xdy/dvs_w.xdy dvs.idxw
 lualatex dvs.tex
 ```
 
+Si on le souhaite, on peut linéariser (optimiser) le fichier PDF produit :
+
+```sh
+qpdf --linearize dvs.pdf dvslin.pdf
+```
+
 ## Contact
 
 Si vous souhaitez me contacter à propos de ce dépôt, le plus simple est de
 poster un message *via* l'interface de GitHub afin de rapporter des erreurs
-(*issues*) ou de demander des modifications (*pull requests*).
+(*Issues*), de demander des modifications (*Pull requests*) ou d'initier des
+discussions (*Discussions*).
 
 ## Remerciements
 
