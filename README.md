@@ -8,7 +8,7 @@
 4.  [Contact](#contact)
 5.  [Remerciements](#remerciements)
 6.  [Licence](#licence)
-7.  [Mentions légales](#mentions-legales)
+7.  [Crédits informatiques](#crédits-informatiques)
 
 ## Introduction
 
@@ -38,8 +38,8 @@ et le programme d'indexation
 
 La discographie au format PDF peut être obtenue *via* le lien ci-dessous.
 
-![PDF](https://github.com/cscheen/sofronitsky/blob/master/img/pdf.png)
-[Discographie](https://github.com/cscheen/sofronitsky/blob/master/dvs.pdf)
+![PDF](https://github.com/cscheen/sofronitsky/tree/main/img/pdf.png)
+[Discographie](https://github.com/cscheen/sofronitsky/blob/main/dvs.pdf)
 
 Si vous souhaitez vérifier le téléchargement effectué, la somme de contrôle
 SHA224 du fichier PDF se trouve dans le fichier `dvs.sha`, à employer avec
