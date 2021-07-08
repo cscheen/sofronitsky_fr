@@ -26,7 +26,7 @@ else
             rm -f dvs.{idxa,idxd,idxn,idxp,idxu,idxw}
             rm -f dvs.{ilga,ilgd,ilgn,ilgp,ilgu,ilgw}
             rm -f dvs.{inda,indd,indn,indp,indu,indw}
-            find ./ -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
             ./dvs.sh check
             ;;
         check)
@@ -76,7 +76,7 @@ else
                 egrep '^!|Error|Warning|Missing|Overfull|Underfull' dvs.log
                 echo '... done.'
             fi
-            find ./ -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
             ./dvs.sh check
             ;;
         produce)
@@ -97,7 +97,7 @@ else
             rm -f dvs.{idxa,idxd,idxn,idxp,idxu,idxw}
             rm -f dvs.{ilga,ilgd,ilgn,ilgp,ilgu,ilgw}
             rm -f dvs.{inda,indd,indn,indp,indu,indw}
-            find ./ -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
             ./dvs.sh check
             find ./ | xargs touch
             ;;
