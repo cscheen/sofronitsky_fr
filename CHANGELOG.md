@@ -4,7 +4,7 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
-## [2021-07-08]
+## [2021-07-13]
 
 *   **[Général]** Installation d'un dépôt sur GitHub.
 *   **[Général]** Passage de la police de caractères Linux Libertine
@@ -22,6 +22,7 @@ Changelog.
     privée).
     Précisions apportées aux programmes des récitals 1925-11-22 et
     1948-03-05.
+    Ajout du concert du 9 mai 1943.
 *   **[Récitals]** Suite à une communication privée avec ADGO en janvier
     2021, ajout des récitals 1960-03-12, 1960-05-29 et 1960-11-14, et
     précisions apportées aux programmes des récitals 1960-01-08 et
