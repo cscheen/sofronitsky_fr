@@ -4,7 +4,7 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
-## [2021-07-13]
+## [2021-07-15]
 
 *   **[Général]** Installation d'un dépôt sur GitHub.
 *   **[Général]** Passage de la police de caractères Linux Libertine
@@ -37,6 +37,7 @@ Changelog.
 *   **[Bibliographie]** Ajout de l'article de Milshteyn dans l'encyclopédie
     musicale dirigée par Keldysh (1981).
     Ajout des références Distler (2020) et Nekrasova (1995).
+    Ajout des thèses de Cotta (1996), Kounadi (2015) et Mehmetli (2017).
 
 ## [2019-12-22]
 
