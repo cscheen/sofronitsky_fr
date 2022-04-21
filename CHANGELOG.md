@@ -33,7 +33,7 @@ Changelog.
     Bogdanov-Berezovsky (1967) et Shiryaeva (1982).
 *   **[Discographie]** Ajout du coffret de trente-quatre disques compacts
     publié en novembre 2019 par la maison d'édition Scribendum (SC817).
-    État d'avancement : onze premiers disques sur trente-quatre.
+    État d'avancement : douze premiers disques sur trente-quatre.
 *   **[Bibliographie]** Ajout de l'article de Milshteyn dans l'encyclopédie
     musicale dirigée par Keldysh (1981).
     Ajout des références Distler (2020) et Nekrasova (1995).
