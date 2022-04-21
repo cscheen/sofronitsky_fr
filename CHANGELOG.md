@@ -4,7 +4,7 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
-## [2021-07-17]
+## [2022-04-21]
 
 *   **[Général]** Installation d'un dépôt sur GitHub.
 *   **[Général]** Passage de la police de caractères Linux Libertine
@@ -33,7 +33,7 @@ Changelog.
     Bogdanov-Berezovsky (1967) et Shiryaeva (1982).
 *   **[Discographie]** Ajout du coffret de trente-quatre disques compacts
     publié en novembre 2019 par la maison d'édition Scribendum (SC817).
-    État d'avancement : neuf premiers disques sur trente-quatre.
+    État d'avancement : onze premiers disques sur trente-quatre.
 *   **[Bibliographie]** Ajout de l'article de Milshteyn dans l'encyclopédie
     musicale dirigée par Keldysh (1981).
     Ajout des références Distler (2020) et Nekrasova (1995).
