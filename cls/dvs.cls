@@ -1068,8 +1068,8 @@
     {\normalsize\mdseries\itshape
         Creative Commons Attribution~4.0 International}\\[0.8\baselineskip]
     {\normalsize\mdseries\upshape
-        \href{https://github.com/cscheen/sofronitsky}%
-            {https://github.com/cscheen/sofronitsky}}\\[0.8\baselineskip]
+        \href{https://github.com/cscheen/sofronitsky_fr}%
+            {https://github.com/cscheen/sofronitsky\_{}fr}}\\[0.8\baselineskip]
     \begin{tabular}[t]{@{}l@{\hspace*{13\p@}}l@{}}
         {\normalsize\mdseries\upshape Mise à jour}
         & {\normalsize\mdseries\upshape \RCSDate} \\
