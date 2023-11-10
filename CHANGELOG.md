@@ -4,6 +4,14 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
+## [2023-11-10]
+
+*   **[Discographie]** Fin du recensement complet du coffret de
+    trente-quatre disques compacts publié en novembre 2019 par la maison
+    d'édition Scribendum (SC817).
+*   **[Bibliographie]** Ajout de l'article de Malik dans International Piano
+    (novembre 2023).
+
 ## [2022-04-21]
 
 *   **[Général]** Installation d'un dépôt sur GitHub.
