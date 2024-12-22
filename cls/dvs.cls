@@ -25,7 +25,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{dvs}
-    [2021-07-08 v1.0j Discographie de Vladimir Sofronickij (CS)]
+    [2024-12-22 v1.0k Discographie de Vladimir Sofronickij (CS)]
 %%
 %%
 %% Parent class
@@ -1659,6 +1659,10 @@
 \newcommand{\Cortot}{Cortot%
     \protect\index[ndxnames]{Cortot, Alfred}}
 \newcommand{\ACortot}{Alfred \Cortot}
+%%
+\newcommand{\Cuelenaere}{Cuelenaere%
+    \protect\index[ndxnames]{Cuelenaere, Karel}}
+\newcommand{\KCuelenaere}{Karel \Cuelenaere}
 %%
 \newcommand{\Daugovet}{Daugovet%
     \protect\index[ndxnames]{Daugovet, Ekaterina Francevna}}
