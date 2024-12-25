@@ -14,9 +14,9 @@
 
 Ce dépôt est consacré à une discographie du pianiste russe
 [Vladimir Sofronitsky](https://fr.wikipedia.org/wiki/Vladimir_Sofronitsky).
-Il comporte aussi une chronologie de l'activité de récital du musicien et
+Il comporte aussi une chronologie de l’activité de récital du musicien et
 une bibliographie.
-Le document est proposé sous la forme d'un fichier PDF et de ses sources.
+Le document est proposé sous la forme d’un fichier PDF et de ses sources.
 
 Le fichier PDF est linéarisé (optimisé) pour un affichage efficient sur le
 *Web*.
@@ -31,26 +31,31 @@ le système de composition de bibliographie
 [BibLaTeX](https://github.com/plk/biblatex)
 (avec le programme de traitement
 [Biber](https://github.com/plk/biber))
-et le programme d'indexation
+et le programme d’indexation
 [Xindy](http://www.xindy.org/).
 
 ## Discographie au format PDF
 
-La discographie au format PDF peut être obtenue *via* le lien ci-dessous.
-
 ![](https://raw.githubusercontent.com/cscheen/sofronitsky_fr/main/img/pdf.png)
-[dvs.pdf](https://raw.githubusercontent.com/cscheen/sofronitsky_fr/main/dvs.pdf)
 
-Si vous souhaitez vérifier le téléchargement effectué, la somme de contrôle
-SHA224 du fichier PDF se trouve dans le fichier `dvs.sha`, à employer avec
-l'utilitaire
-[sha224sum](https://www.gnu.org/software/coreutils/manual/coreutils.html).
+La discographie au format PDF (fichier `dvs.pdf`) et la somme de contrôle
+SHA224 des sources complètes (fichier `dvs.sha`) sont désormais distribuées
+dans les
+[*Releases*](https://github.com/cscheen/sofronitsky_fr/releases)
+du projet :
+
+*   le fichier `dvs.pdf` permet d’obtenir la discographie sans en compiler
+les sources au préalable,
+*   le fichier `dvs.sha` permet de vérifier le téléchargement effectué, en
+employant l’utilitaire
+[`sha224sum`](https://www.gnu.org/software/coreutils/manual/coreutils.html).
 
 ## Compilation des sources
 
 La liste antichronologique des modifications apportées aux sources du
 document, à partir de la première version publique (2016-11-29), se trouve
-dans le fichier `CHANGELOG.md`.
+dans le fichier
+[`CHANGELOG.md`](../../blob/main/CHANGELOG.md).
 
 ### Prérequis
 
@@ -74,34 +79,42 @@ Les polices de caractères suivantes sont requises, au format OTF :
 *   [Asana-Math](https://www.ctan.org/pkg/asana-math),
 *   [CCIcons](https://github.com/ummels/ccicons).
 
-Le plus simple est d'utiliser une distribution récente du système TeX, par
+Le plus simple est d’utiliser une distribution récente du système TeX, par
 exemple
 [TeX Live](http://www.tug.org/texlive/),
-qui contient déjà les polices et logiciels requis, à l'exception de QPDF.
-Le dépôt est testé et fonctionne avec la version 2021 de TeX Live.
+qui contient déjà les polices et logiciels requis, à l’exception de QPDF.
+Le dépôt est testé et fonctionne avec la version 2024 de TeX Live.
 
 ### Compilation
 
-Le fichier `MANIFEST.txt` indique la fonction de chaque source du document.
+Le fichier
+[`MANIFEST.txt`](../../blob/main/MANIFEST.txt)
+indique la fonction de chaque source du document.
 
-Si votre système d'exploitation ne reconnaît pas les liens symboliques,
-alors il faut recopier (ou déplacer) la classe de document `dvs.cls` du
-sous-répertoire `cls/` vers la racine du dépôt :
+Si votre système d’exploitation ne reconnaît pas les liens symboliques,
+alors il faut recopier (ou déplacer) la classe de document
+[`dvs.cls`](../../blob/main/cls/dvs.cls)
+du sous-répertoire
+[`cls/`](../../tree/main/cls)
+vers la racine du dépôt :
 
 ```sh
 cp -p cls/dvs.cls dvs.cls
 ```
 
-Si votre système d'exploitation reconnaît les liens symboliques, alors il
+Si votre système d’exploitation reconnaît les liens symboliques, alors il
 faut établir un lien symbolique vers la classe de document :
 
 ```sh
 ln -s cls/dvs.cls dvs.cls
 ```
 
-On peut utiliser le *script* de *shell* `dvs.sh` (ou s'en inspirer).
+On peut utiliser le *script* de *shell*
+[`dvs.sh`](../../blob/main/dvs.sh)
+(ou s’en inspirer).
 Sinon, exécuter une première fois le programme `lualatex` sur le fichier
-maître `dvs.tex` :
+principal
+[`dvs.tex`](../../blob/main/dvs.tex) :
 
 ```sh
 lualatex dvs.tex
@@ -130,24 +143,24 @@ qpdf --linearize dvs.pdf dvslin.pdf
 
 ## Contact
 
-Si vous souhaitez me contacter à propos de ce dépôt, le plus simple est de
-poster un message *via* l'interface de GitHub afin de rapporter des erreurs
-(*Issues*), de demander des modifications (*Pull requests*) ou d'initier des
+Si vous souhaitez me contacter à propos de ce projet, le plus simple est de
+poster un message *via* l’interface de GitHub afin de rapporter des erreurs
+(*Issues*), de demander des modifications (*Pull requests*) ou d’initier des
 discussions (*Discussions*).
 
 ## Remerciements
 
 Je remercie
 [Farhan Malik](http://www.farhanmalik.com/)
-de m'avoir autorisé à distribuer ce document sur le *Web* -- il n'existerait
+de m’avoir autorisé à distribuer ce document sur le *Web* -- il n’existerait
 pas sans la discographie préparée par Farhan Malik et publiée dans la revue
 *International Piano Quarterly* (ISSN 1368-9770) en 1998.
 Son autorisation ne signifie pas que Farhan Malik approuve ce document, et
 je reste seul responsable des erreurs et omissions qui entachent mon
 travail.
 
-J'en profite pour inviter les lecteurs à me faire part de leurs remarques,
-s'ils le souhaitent.
+J’en profite pour inviter les lecteurs à me faire part de leurs remarques,
+s’ils le souhaitent.
 Des détails sont donnés ci-dessus, au paragraphe
 [Contact](#contact).
 
@@ -155,16 +168,20 @@ Des détails sont donnés ci-dessus, au paragraphe
 
 Sauf mention contraire explicite, les fichiers de ce dépôt sont sous la
 licence *Creative Commons Attribution 4.0 International*
-([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)).
-Une copie du texte de la licence se trouve dans le fichier `LICENSE.txt`.
+([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.fr)).
+Une copie du texte de la licence se trouve dans le fichier
+[`LICENSE.txt`](../../blob/main/LICENSE.txt).
 
 La seule exception concerne les fichiers qui permettent la compilation du
 document à partir de ses sources.
 Ces fichiers sont sous la licence *LaTeX Project Public License 1.3c*
 ([LPPL 1.3c](https://www.ctan.org/license/lppl1.3c)).
-Les fichiers concernés sont la classe de document `cls/dvs.cls` et les six
-styles d'index `xdy/dvs_*.xdy`.
-Une copie du texte de la licence se trouve dans le fichier `LPPL.txt`.
+Les fichiers concernés sont la classe de document
+[`cls/dvs.cls`](../../blob/main/cls/dvs.cls)
+et les six styles d’index
+[`xdy/dvs_*.xdy`](../../tree/main/xdy).
+Une copie du texte de la licence se trouve dans le fichier
+[`LPPL.txt`](../../blob/main/LPPL.txt).
 
 ## Crédits informatiques
 
@@ -172,22 +189,22 @@ Les logiciels utilisés afin de réaliser et compiler ce document sont les
 suivants :
 
 *   [Audacity](https://www.audacityteam.org/)
-    (écoutes comparatives des sources audio),
+(écoutes comparatives des sources audio),
 *   [Sonic Visualiser](https://sonicvisualiser.org/)
-    avec le greffon
-    [MATCH](https://code.soundsoftware.ac.uk/projects/match-vamp)
-    (écoutes comparatives des sources audio),
+avec le greffon
+[MATCH](https://code.soundsoftware.ac.uk/projects/match-vamp)
+(écoutes comparatives des sources audio),
 *   [Sonic Lineup](https://sonicvisualiser.org/sonic-lineup/index.html)
-    (écoutes comparatives des sources audio),
+(écoutes comparatives des sources audio),
 *   [LuaTeX](http://luatex.org/)
-    (moteur de composition typographique),
+(moteur de composition typographique),
 *   [LaTeX](https://www.latex-project.org/)
-    (système de préparation de document et format),
+(système de préparation de document et format),
 *   [BibLaTeX](https://github.com/plk/biblatex)
-    (système de composition de bibliographie),
+(système de composition de bibliographie),
 *   [Biber](https://github.com/plk/biber)
-    (programme de traitement de bibliographie),
+(programme de traitement de bibliographie),
 *   [Xindy](http://www.xindy.org/)
-    (programme d'indexation),
+(programme d’indexation),
 *   [QPDF](https://github.com/qpdf/qpdf)
-    (programme de linéarisation ou optimisation de fichier PDF).
+(programme de linéarisation ou optimisation de fichier PDF).
