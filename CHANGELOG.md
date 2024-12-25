@@ -4,6 +4,12 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
+## [2024-12-25]
+
+*   **[Général]** Homogénéisation des numéros de catalogue pour tous les
+    disques 78 tours et disques vinyles publiés par Melodija.
+*   **[Général]** Simplification profonde (mais incompatible) du dépôt Git.
+
 ## [2024-01-05]
 
 *   **[Discographie]** Fin du recensement complet du coffret de

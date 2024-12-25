@@ -1,3 +1,9 @@
+.\#*
+\#*\#
+*.el
+*.elc
+*~
+/auto/
 tex/*.aux
 dvs.aux
 dvs.bbl
@@ -12,3 +18,4 @@ dvs.res
 dvs.run.xml
 dvs.sha
 dvs.toc
+!**/.gitkeep
