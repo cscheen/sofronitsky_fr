@@ -25,7 +25,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{dvs}
-    [2024-12-22 v1.0k Discographie de Vladimir Sofronickij (CS)]
+    [2024-12-29 v1.0l Discographie de Vladimir Sofronickij (CS)]
 %%
 %%
 %% Parent class
@@ -845,6 +845,7 @@
 %% Hypertext marks
 %% ---------------
 %%
+\RequirePackage{memhfixc}[2023-09-10]
 \PassOptionsToPackage{colorlinks=true}{hyperref}
 \PassOptionsToPackage{hyperindex=false}{hyperref}
 \PassOptionsToPackage{pdfpagemode=UseOutlines}{hyperref}
