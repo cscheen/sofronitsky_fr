@@ -2,6 +2,8 @@
 #
 # This is Bash shell script dvs.sh
 #
+PATTERN='.bib$|.cls$|.gitignore$|.md$|.pdf$|.png$|.sh$|.tex$|.txt$|.ver$|.xdy$'
+#
 if [ $# -eq 0 ]; then
     echo "Usage: ./dvs.sh [clean|check|typeset|produce|push]" 1>&2
     echo "    clean:   remove generated files and clean source repository" 1>&2
@@ -26,7 +28,7 @@ else
             rm -f dvs.{idxa,idxd,idxn,idxp,idxu,idxw}
             rm -f dvs.{ilga,ilgd,ilgn,ilgp,ilgu,ilgw}
             rm -f dvs.{inda,indd,indn,indp,indu,indw}
-            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./ -type f | xargs sha224sum | egrep ${PATTERN} | sort > dvs.sha
             ./dvs.sh check
             ;;
         check)
@@ -76,7 +78,7 @@ else
                 egrep '^!|Error|Warning|Missing|Overfull|Underfull' dvs.log
                 echo '... done.'
             fi
-            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./ -type f | xargs sha224sum | egrep ${PATTERN} | sort > dvs.sha
             ./dvs.sh check
             ;;
         produce)
@@ -97,7 +99,7 @@ else
             rm -f dvs.{idxa,idxd,idxn,idxp,idxu,idxw}
             rm -f dvs.{ilga,ilgd,ilgn,ilgp,ilgu,ilgw}
             rm -f dvs.{inda,indd,indn,indp,indu,indw}
-            find ./* -type f | xargs sha224sum | egrep -v 'dvs.sha$' | sort > dvs.sha
+            find ./ -type f | xargs sha224sum | egrep ${PATTERN} | sort > dvs.sha
             ./dvs.sh check
             find ./ | xargs touch
             ;;
