@@ -4,6 +4,15 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
+## [2025-01-05]
+
+*   **[Général]** Dernière mise à jour de la version française de ce projet,
+    qui ne recevra plus que des corrections d'erreurs (en l'absence de
+    publication discographique majeure).
+    Raison : travail sur la future version anglaise du projet.
+*   **[Discographie]** Fin du recensement complet du coffret de dix disques
+    compacts publié par la maison d'édition Documents (Membran).
+
 ## [2024-12-25]
 
 *   **[Général]** Homogénéisation des numéros de catalogue pour tous les
