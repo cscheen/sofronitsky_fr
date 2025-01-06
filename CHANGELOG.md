@@ -4,7 +4,7 @@ La liste ci-dessous, organisée de manière antichronologique, s'inspire de
 [ces conseils](https://keepachangelog.com/en/1.0.0/) en vue de la tenue d'un
 Changelog.
 
-## [2025-01-05]
+## [2025-01-06]
 
 *   **[Général]** Dernière mise à jour de la version française de ce projet,
     qui ne recevra plus que des corrections d'erreurs (en l'absence de
