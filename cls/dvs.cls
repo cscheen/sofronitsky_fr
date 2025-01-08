@@ -25,7 +25,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{dvs}
-    [2024-12-22 v1.0k Discographie de Vladimir Sofronickij (CS)]
+    [2025-01-08 v1.0l Discographie de Vladimir Sofronickij (CS)]
 %%
 %%
 %% Parent class
@@ -452,8 +452,11 @@
     celui des disques compacts consacrés à \VSofronitsky{}.
     Les publications sur disques 78~tours, échelonnées de~1937 à~1959, sont
     aussi répertoriées, de même que les éditions sur support informatique
-    dématérialisé (fichiers~FLAC ou~MP3, par exemple), pour autant que ces
-    dernières proposent des interprétations jusqu'alors inédites.}
+    dématérialisé (fichiers~FLAC ou~MP3, par exemple), même lorsque ces
+    dernières proposent des interprétations déjà éditées ailleurs.
+    En revanche, les autres publications sur disques vinyles ne sont
+    recensées que si leur contenu est absent de la série des enregistrements
+    complets, laissée inachevée par Melodija.}
 \newcommand{\pindexprologue}{%
     \hspace*{13\p@}\ignorespaces
     La liste recense de manière chronologique toutes les dates de présence
@@ -506,7 +509,7 @@
 \renewcommand{\@idxitem}{\par\hangindent10\p@}
 \renewcommand{\subitem}{\par\hangindent10\p@\hspace*{10\p@}}
 \renewcommand{\subsubitem}{\par\hangindent10\p@\hspace*{20\p@}}
-\renewcommand{\indexspace}{\par\vskip8.0\p@\@plus2.0\p@\@minus1.0\p@\relax}
+\renewcommand{\indexspace}{\par\vskip10.0\p@\@plus2.0\p@\@minus1.0\p@\relax}
 %%
 %%
 %% Color settings
