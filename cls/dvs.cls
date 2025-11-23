@@ -25,7 +25,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{dvs}
-    [2025-01-08 v1.0l Discographie de Vladimir Sofronickij (CS)]
+    [2025-11-23 v1.0m Discographie de Vladimir Sofronickij (CS)]
 %%
 %%
 %% Parent class
@@ -147,6 +147,7 @@
     \fi
     \expandafter\csname idxtitle@#2\endcsname
 }
+\def\@first#1:#2:#3\@nil{#1}
 \def\@second#1:#2:#3\@nil{#2}
 \def\@third#1:#2:#3\@nil{#3}
 \def\@nearverbatim{\expandafter\strip@prefix\meaning}
@@ -156,7 +157,7 @@
 \newif\if@silentindex\@silentindextrue
 \newif\if@addtoindex\@addtoindextrue
 \newif\ifproofmode\proofmodefalse
-\def\index{\protect\p@index}
+\protected\def\index{\protect\p@index}
 \def\p@index{%
     \if@silentindex\@bsphack\fi
     \@ifstar{\@silentindexfalse\@xindex}{\@silentindextrue\@xindex}%
@@ -290,10 +291,16 @@
         {\@latexerr{Index type `\string#1' undefined}\@ehc}%
         {%
             \edef\@tempa{\@nameuse{idx@#1}}%
-            \edef\@tempa{%
-                \noexpand\@input@{\jobname.\expandafter\@second\@tempa\@nil}%
+            \edef\@tempb{%
+                \jobname.\expandafter\@second\@tempa\@nil
             }%
-            \@tempa
+            \edef\@tempc{%
+                \jobname.\expandafter\@first\@tempa\@nil
+            }%
+            \InputIfFileExists{\@tempb}{}{%
+                \typeout{No file \@tempb: Run makeindex -o
+                    \@tempb \space \@tempc}%
+            }%
         }%
 }
 \def\@indexstar@{\index*}
@@ -381,12 +388,12 @@
 \let\@texttop\@mkidx
 \CheckCommand\addtocontents[2]{%
   \protected@write\@auxout
-      {\let\label\@gobble \let\index\@gobble \let\glossary\@gobble}%
+      {\let\label\@gobble@om \let\index\@gobble@som \let\glossary\@gobble@om}%
       {\string\@writefile{#1}{#2}}%
 }
 \renewcommand{\addtocontents}[2]{%
     \protected@write\@auxout
-      {\let\label\@gobble \let\glossary\@gobble}%
+      {\let\label\@gobble@om \let\glossary\@gobble@om}%
       {\string\@writefile{#1}{#2}}%
 }
 \let\old@starttoc\@starttoc
@@ -395,24 +402,6 @@
         \@addtoindexfalse
         \old@starttoc{#1}%
     \endgroup
-}
-\DeclareRobustCommand\markboth[2]{%
-    \begingroup
-        \let\label\relax \let\glossary\relax
-        \unrestored@protected@xdef\@themark {{#1}{#2}}%
-        \@temptokena \expandafter{\@themark}%
-        \mark{\the\@temptokena}%
-    \endgroup
-    \if@nobreak\ifvmode\nobreak\fi\fi
-}
-\DeclareRobustCommand\markright[1]{%
-    \begingroup
-        \let\label\relax \let\glossary\relax
-        \expandafter\@markright\@themark {#1}%
-        \@temptokena \expandafter{\@themark}%
-        \mark{\the\@temptokena}%
-    \endgroup
-    \if@nobreak\ifvmode\nobreak\fi\fi
 }
 \newcounter{performance}[section]
 \renewcommand{\theperformance}{\thesection\Alph{performance}}
@@ -627,7 +616,7 @@
 %% ------------------------
 %%
 \PassOptionsToPackage{dutch}{babel}
-\PassOptionsToPackage{german}{babel}
+\PassOptionsToPackage{ngerman}{babel}
 \PassOptionsToPackage{italian}{babel}
 \PassOptionsToPackage{spanish}{babel}
 \PassOptionsToPackage{portuguese}{babel}
@@ -650,9 +639,8 @@
     AutoSpaceFootnotes=true}
 \addto\captionsfrench{\def\figurename{Figure}}
 \addto\captionsfrench{\def\tablename{Tableau}}
-\renewcommand*{\CaptionSeparator}{.\space}
 \renewcommand\dutchhyphenmins{33}
-\renewcommand\germanhyphenmins{33}
+\renewcommand\ngermanhyphenmins{33}
 \renewcommand\italianhyphenmins{33}
 \renewcommand\spanishhyphenmins{33}
 \renewcommand\portuguesehyphenmins{33}
@@ -909,6 +897,7 @@
 %% ------
 %%
 \RequirePackage{longtable}[2020/01/07]
+\captiondelim{.\space}
 \captionnamefont{\normalsize\rmfamily\bfseries\upshape}
 \captiontitlefont{\normalsize\rmfamily\mdseries\itshape}
 \cmidrulewidth=0.25pt
