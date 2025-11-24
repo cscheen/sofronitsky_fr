@@ -25,7 +25,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
 \ProvidesClass{dvs}
-    [2025-11-23 v1.0m Discographie de Vladimir Sofronickij (CS)]
+    [2025-11-24 v1.0n Discographie de Vladimir Sofronickij (CS)]
 %%
 %%
 %% Parent class
@@ -38,13 +38,13 @@
 \PassOptionsToClass{onecolumn}{memoir}
 \PassOptionsToClass{openright}{memoir}
 \PassOptionsToClass{final}{memoir}
-\LoadClass{memoir}[2020/10/04]
+\LoadClass{memoir}[2025/11/04]
 %%
 %%
 %% Class options
 %% -------------
 %%
-\RequirePackage{ifthen}[2014/09/29]
+\RequirePackage{ifthen}[2024/03/16]
 \newboolean{dvs@ptframe}
 \newboolean{dvs@pthang}
 \DeclareOption{frame}{%
@@ -505,7 +505,7 @@
 %% --------------
 %%
 \PassOptionsToPackage{cmyk}{xcolor}
-\RequirePackage{xcolor}[2016/05/11]
+\RequirePackage{xcolor}[2024/09/29]
 \definecolor{dvsred}{cmyk}{0.00,0.83,0.91,0.28}
 \definecolor{dvsgreen}{cmyk}{0.63,0.00,0.78,0.38}
 \definecolor{dvsblue}{cmyk}{0.99,0.73,0.00,0.29}
@@ -517,7 +517,7 @@
 %% -------------
 %%
 \PassOptionsToPackage{no-math}{fontspec}
-\RequirePackage{fontspec}[2020/02/21]
+\RequirePackage{fontspec}[2025/09/29]
 \setmainfont{Libertinus Serif}[%
     Renderer           = {Full},%
     Ligatures          = {TeX,Common,Historic},%
@@ -623,7 +623,7 @@
 \PassOptionsToPackage{russian}{babel}
 \PassOptionsToPackage{english}{babel}
 \PassOptionsToPackage{french}{babel}
-\RequirePackage{babel}[2021/01/26]
+\RequirePackage{babel}[2025/11/09]
 \frenchsetup{%
     StandardItemizeEnv=true,
     StandardEnumerateEnv=true,
@@ -652,7 +652,7 @@
 %% Context sensitive quotes
 %% ------------------------
 %%
-\RequirePackage{csquotes}[2021-01-04]
+\RequirePackage{csquotes}[2024-04-04]
 %%
 %%
 %% Bibliography and citations
@@ -675,7 +675,7 @@
 \PassOptionsToPackage{mergedate=false}{biblatex}
 \PassOptionsToPackage{date=comp}{biblatex}
 \PassOptionsToPackage{dashed=false}{biblatex}
-\RequirePackage{biblatex}[2020/12/31]
+\RequirePackage{biblatex}[2025/07/10]
 \renewcommand{\bibsetup}{\flushbottom}
 \defbibenvironment{bibliography}{%
     \list{}{%
@@ -765,20 +765,20 @@
 %% Multicolumn output
 %% ------------------
 %%
-\RequirePackage{multicol}[2019/12/09]
+\RequirePackage{multicol}[2025/10/21]
 %%
 %%
 %% Infix notation arithmetic
 %% -------------------------
 %%
-\RequirePackage{calc}[2017/05/25]
+\RequirePackage{calc}[2025/03/01]
 %%
 %%
 %% Date with week day
 %% ------------------
 %%
-\RequirePackage{tikz}[2020/12/27]
-\RequirePackage{pgfcalendar} %%%%[2020/12/27]
+\RequirePackage{tikz}[2025-08-29]
+\RequirePackage{pgfcalendar} %%%%[2025/08/29]
 \newcount\dvsJulianDay
 \newcount\dvsWeekDay
 \newcommand{\DateWithWeekDay}[1]{#1
@@ -799,13 +799,13 @@
 %% Hyphenatable letter-spacing
 %% ---------------------------
 %%
-\RequirePackage{soul}[2003/11/17]
+\RequirePackage{soul}[2023-06-14]
 %%
 %%
 %% Manipulating token chains
 %% -------------------------
 %%
-\RequirePackage{xstring}[2019/02/06]
+\RequirePackage{xstring}[2023/08/22]
 %%
 %%
 %% Typesetting engine
@@ -849,10 +849,10 @@
 \PassOptionsToPackage{menucolor=dvsred}{hyperref}
 \PassOptionsToPackage{urlcolor=dvsblue}{hyperref}
 \PassOptionsToPackage{unicode=true}{hyperref}
-\RequirePackage{hyperref}[2020-05-15]
+\RequirePackage{hyperref}[2025-07-12]
 \PassOptionsToPackage{open}{bookmark}
 \PassOptionsToPackage{openlevel=0}{bookmark}
-\RequirePackage{bookmark}[2020-11-06]
+\RequirePackage{bookmark}[2023-12-10]
 \hypersetup{%
     pdftitle={Vladimir Sofronickij : discographie},%
     pdfauthor={Christian Scheen},%
@@ -876,7 +876,7 @@
 %% Logos
 %% -----
 %%
-\RequirePackage{hologo}[2019/12/05]
+\RequirePackage{hologo}[2025-11-11]
 \newcommand{\Biber}{\Hologo{biber}\xspace}
 \newcommand{\Biblatex}{Bib\hologo{LaTeX}\xspace}
 \newcommand{\Bibtex}{\hologo{BibTeX}\xspace}
@@ -896,7 +896,7 @@
 %% Floats
 %% ------
 %%
-\RequirePackage{longtable}[2020/01/07]
+\RequirePackage{longtable}[2025-10-13]
 \captiondelim{.\space}
 \captionnamefont{\normalsize\rmfamily\bfseries\upshape}
 \captiontitlefont{\normalsize\rmfamily\mdseries\itshape}
@@ -951,7 +951,7 @@
 \PassOptionsToPackage{verbose=errors}{microtype}
 \PassOptionsToPackage{babel=false}{microtype}
 \PassOptionsToPackage{config=microtype}{microtype}
-\RequirePackage{microtype}[2020/12/07]
+\RequirePackage{microtype}[2025/07/09]
 %%
 %%
 %% Page layout
@@ -1255,7 +1255,7 @@
 %% -----
 %%
 \PassOptionsToPackage{shortlabels}{enumitem}
-\RequirePackage{enumitem}[2019/06/20]
+\RequirePackage{enumitem}[2025/02/06]
 \setlist[itemize,enumerate]{%
     topsep=0\p@\@plus1\p@\@minus0\p@,%
     partopsep=0\p@\@plus1\p@\@minus0\p@,%

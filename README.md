@@ -83,7 +83,7 @@ Le plus simple est d’utiliser une distribution récente du système TeX, par
 exemple
 [TeX Live](http://www.tug.org/texlive/),
 qui contient déjà les polices et logiciels requis, à l’exception de QPDF.
-Le dépôt est testé et fonctionne avec la version 2024 de TeX Live.
+Le dépôt est testé et fonctionne avec la version 2025 de TeX Live.
 
 ### Compilation
 
