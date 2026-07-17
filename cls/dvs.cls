@@ -532,12 +532,12 @@
     WordSpace          = {1,1.2,1},%
     Scale              = {1},%
 ]
-\setsansfont{Source Sans Pro}[%
+\setsansfont{Source Sans 3}[%
     Renderer           = {Full},%
     Ligatures          = {TeX},%
-    BoldFont           = {Source Sans Pro Semibold},%
-    ItalicFont         = {Source Sans Pro Italic},%
-    BoldItalicFont     = {Source Sans Pro Semibold Italic},%
+    BoldFont           = {Source Sans 3 Semibold},%
+    ItalicFont         = {Source Sans 3 Italic},%
+    BoldItalicFont     = {Source Sans 3 Semibold Italic},%
     SmallCapsFeatures  = {LetterSpace=6},%
     Numbers            = {OldStyle},%
     WordSpace          = {1,1.2,1},%
