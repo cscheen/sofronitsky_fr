@@ -1,5 +1,14 @@
 # Vladimir Sofronitsky
 
+## Dépôt archivé (2026-11-23)
+
+Le dépôt de la version en français du projet a été archivé lundi 23 novembre
+2026.
+Il est désormais accessible seulement en lecture.
+Mon travail sur ce projet se poursuit néanmoins *via* le dépôt de la
+[version en anglais](https://github.com/cscheen/sofronitsky_en),
+également accessible sur GitHub.
+
 ## Sommaire
 
 1.  [Introduction](#introduction)
